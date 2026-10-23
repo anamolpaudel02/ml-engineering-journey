@@ -41,7 +41,7 @@ print(
 coffee_new = coffee.copy()
 
 
-coffee_new['new_price'] = 5.67
+coffee_new['new_price'] = 50
 
 print(
     "This is the orginal one , coffee :\n",
@@ -295,3 +295,80 @@ print(
         aggfunc='sum'
     )
 )
+
+
+
+print(
+    "Mean of each day coffee sale:\n",
+    coffee.groupby('day').agg(
+        units_mean = ('units','mean'),
+        total_unit_sales= ('units','sum'),
+        total_sales = ('Revenue','sum'),
+    )
+)
+
+# this can be done by following but there is one problem that the same header cannot be used twice 
+# if we try to add two header more than one time then the latest one will overide the previos one
+print(
+    "Mean of each day coffee sale:\n",
+    coffee.groupby('day').agg({
+        'units':'mean',  
+        # 'units' :'sum',  
+        
+        "price" : 'sum'
+    }
+    )
+)
+
+
+print(
+    "\nMultiple statistics for day price:\n",
+    coffee.groupby('day')['price'].agg(
+        ['sum', 'mean', 'min', 'max', 'count']
+    )
+)
+
+
+# now we will learn some advance python fucationality: shift(), rolling() ,rank(),cumsum()
+
+#     first we will learn about the .shift() function
+
+# shift function is used to compare the data ,here we will compare the revenue in compare to yesterday
+
+coffee['yesterday_revenure'] = coffee['Revenue'].shift(1)
+# this will give yesterday revenue
+coffee['Pct_change'] = ((coffee['Revenue']-coffee['yesterday_revenure'])/coffee['Revenue'])*100
+
+
+# now we will use rank()
+
+coffee['sales_rank'] = coffee['Revenue'].rank(ascending=False)
+# in above coding if we remove ascending=False then if there is same rank like 2 has same it will give 1.5 for both making mid but if we add ascending=False then there will be integer
+coffee.sort_values(['sales_rank'],ascending=False).sample()
+
+# here the sample(10) will look the revenue of 10 row
+
+# the cumsum() funtion will give the total of all time 
+
+# note be careful if we do coffee.cumsum then it will give of all mes like if the data is 12345 then it gives 1 12 123 1234 12345 
+
+coffee['cumulative_revenue'] = coffee['Revenue'].cumsum()
+
+# rolling funtion is used to get the common type operation for n times
+# if we want revenue of coffee type like latte 
+
+lattee = coffee[coffee['coffee'] == "Latte"].copy()
+
+lattee['3days'] = lattee['units'].rolling(3).sum()
+
+print(
+    "The sales for looking the Latte revenue sum of the last 3 days by using  rolling() :\n",
+    lattee
+    )
+
+print(
+    "This is the use of advance pandas summary of all output like using hift(),rank(),cumsum():\n",
+    coffee.head(10)
+    )
+
+
