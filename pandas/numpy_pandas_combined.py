@@ -292,6 +292,6 @@ print(
         index='day',
         columns='coffee',
         values='units',
-        aggfunc='sun'
+        aggfunc='sum'
     )
 )
