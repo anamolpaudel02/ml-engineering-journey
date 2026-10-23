@@ -71,7 +71,8 @@ ml-engineering-journey/
 - Filtering and sorting data
 - Handling missing values with `NaN`, `fillna()`, and `interpolate()`
 - Combining datasets using `merge()` and `concat()`
-- Handling missing values with `isna()`, `notna()`, `dropna()`, `fillna()`,   `interpolate()`; aggregating with `value_counts()`, `groupby()`, `agg()`, and pivot tables
+- Handling missing values with `isna()`, `notna()`, `dropna()`, `fillna()`,   `interpolate()`; aggregating with `value_counts()`, `groupby()`, `agg()`, and `pivot tables`
+- Add pandas , `shift()`, `rank()`, `cumsum()`, `rolling()` examples
 - Working with CSV files
 - Performing data analysis using NumPy and Pandas together
 
