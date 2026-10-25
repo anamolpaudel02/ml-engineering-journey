@@ -22,6 +22,7 @@ This repository is my public learning log: a place to practice consistently, doc
 | Python | Core programming language |
 | NumPy | Numerical computing and array operations |
 | Pandas | Data manipulation and analysis |
+| Matplotlib | Data visualisation |
 | Git & GitHub | Version control and progress tracking |
 | VS Code | Development environment |
 
@@ -45,6 +46,15 @@ ml-engineering-journey/
 │   ├── numpy_pandas_combined.py
 │   ├── small_project.py
 │   └── use_files.py
+│── matpilotlib/
+│   ├── bargraph.py
+│   ├── basic_plot_custominization.py
+│   ├── grid.py
+│   ├── histogram.py
+│   ├── piechart.py
+│   ├── scatte_plot.py
+│   ├── what_to_use_when.txt
+│   └── subplot.py
 │
 ├── warmup-data/
 │   ├── coffee.csv
@@ -76,9 +86,17 @@ ml-engineering-journey/
 - Working with CSV files
 - Performing data analysis using NumPy and Pandas together
 
+
+### 3. Matplotlib
+
+- Creating and customizing plots using `matplotlib.pyplot`
+- Adding titles, axis labels, and grid lines
+- Visualizing categorical data using bar charts and pie charts
+- Analyzing relationships and distributions using scatter plots and histograms
+- Displaying multiple charts using `subplots()` and integrating NumPy and Pandas data for visualization
+
 ### 3. Next Learning Stages
 
-- Data visualization
 - Mathematics and statistics for machine learning
 - Classical machine learning with scikit-learn
 - Model evaluation and experimentation
@@ -114,6 +132,7 @@ Run an individual script, for example:
 ```bash
 python numpy/learnnp.py
 python pandas/learn.py
+python matplot/learn.py
 ```
 
 Run scripts from the repository root unless a script specifies otherwise. Some exercises may require their associated data files or paths to be configured.
