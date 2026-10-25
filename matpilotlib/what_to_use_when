@@ -1,0 +1,20 @@
+Chart
+- Bar chart
+  Main purpose: Compare categories
+  Typical use: Students in different faculties
+
+- Pie chart
+  Main purpose: Show proportions of a whole
+  Typical use: Faculty-wise student percentages
+
+- Scatter plot
+  Main purpose: Examine relationships between two numerical variables
+  Typical use: Study hours vs marks
+
+- Histogram
+  Main purpose: Show numerical data distributions
+  Typical use: Distribution of exam marks
+
+- Subplots
+  Main purpose: Display multiple charts together
+  Typical use: Compare scatter plot and histogram views
