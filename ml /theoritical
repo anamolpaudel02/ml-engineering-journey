@@ -1,0 +1,104 @@
+1. Supervised Learning
+Labeled data
+The model learns from examples where the correct answers are already known.
+- Classification:predict discete classes
+ Predicts a category, such as spam or not spam.
+    Under Classification they are generally of two type 
+    i.Binary Classification:Predicts one of two classes (e.g., Spam / Not Spam)
+    ii.Multiclass Classification:Predicts one of three or more classes (e.g., Cat / Dog / Bird)
+- Regression:predict continuous classes
+ Predicts a numerical value, such as house prices.
+Algorithms: Linear Regression, Logistic Regression, Decision Trees, Random Forest, SVM.
+
+
+2. Unsupervised Learning
+Unlabeled data
+The model discovers patterns or structures without being given correct answers.
+- Clustering: Groups similar customers or data points.
+- Dimensionality reduction: Reduces the number of features while preserving useful information.
+Algorithms: K-Means, DBSCAN, PCA, Hierarchical Clustering.
+
+
+3. Reinforcement Learning (RL)
+Reward-based learning
+An agent learns by taking actions, observing results, and receiving rewards or penalties.
+- Example: A robot learns to navigate a maze.
+- Goal: Learn a policy that maximizes cumulative reward.
+Algorithms: Q-Learning, SARSA, PPO.
+
+Types of categorical data
+1. Nominal data —categories with no natural order(non-inheritance data)
+    - Examples: color (red, blue), class (g, h), city (Pokhara, Kathmandu).
+    - ML example: encoding categories using one-hot encoding.
+2. Ordinal data — categories with a meaningful order (inheritance data)
+    - Examples: satisfaction (low, medium, high), grades (C, B, A).
+    - ML example: ordinal encoding.
+
+Types of quantitative data
+
+1. Discrete Data
+    Data that is countable, usually expressed as whole numbers.
+    -Obtained by Counting
+    Examples:
+        - Number of students: 45
+        - Number of computers: 12
+        - Number of bugs in a program: 3
+    You cannot have 2.5 students or 3.7 computers in an ordinary counting context.
+2. Continuous Data
+    Data that can take any value within a range, depending on measurement precision.
+    -Obtained by Measuring
+    Examples:
+        - Height: 165.5 cm
+        - Temperature: 28.6°C
+        - Time taken by an algorithm: 2.43 seconds
+        - Weight: 58.7 kg
+
+Computers are good at understanding maths(generally numbers) then the rather than the word or sentence  like humans 
+
+
+Type of variables
+
+1. Feature Matrix (X)
+     Contains the input features used by the ML model to make predictions.
+     Also called independent variables or input variables
+
+
+
+2. Label Vector (y)
+     Contains the correct outputs or target values the model learns to predict
+     Also called dependent variable or target variable
+
+ 
+Dataset
+  A collection of data used to train, validate, or test a machine learning model.
+  Types
+    1. Training Dataset: Used to train the model
+    2. Validation Dataset: Used to tune the model's parameters
+    3. Testing Dataset: Used to evaluate the model's performance on unseen data
+
+Loss Function
+    Measures the difference between a model’s predicted output and the actual output
+    Lower loss generally indicates better predictions
+    Type:
+        1. Classification
+         Binary Cross-Entropy, Categorical Cross-Entropy
+            i.Binary Cross-Entropy (BCE)
+              Measures prediction error when classifying between two classes
+            ii.Categorical Cross-Entropy (CCE)
+              Measures prediction error when classifying among three or more classes
+        2. Regression
+         Mean Squared Error (MSE), Mean Absolute Error (MAE)
+            i.L1 Loss (MAE)
+             Calculates the absolute difference between predicted and actual values
+            ii.L2 Loss (MSE)
+             Calculates the squared difference between predicted and actual values, penalizing larger errors more heavily
+
+Tranning
+    The adjustent done by the result and loss function
+
+Test set used as to check how generalizacle the final chosen model is 
+
+Accuracy
+     Measures the proportion of correct predictions out of all predictions made by a model
+
+
