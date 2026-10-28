@@ -68,6 +68,11 @@ ml-engineering-journey/
 ## 📚 Current Learning Progress
 
 ### 1. NumPy
+
+**Learning resource:**[Python NumPy Tutorial for Beginners — freeCodeCamp.org] 
+https://youtu.be/QUT1VHiLmmI?si=lCSuL2XnqKi-ocG3
+
+
 - Creating and manipulating arrays
 - Understanding array dimensions, shapes, sizes, and data types
 - Indexing, slicing, and reshaping arrays
@@ -76,6 +81,10 @@ ml-engineering-journey/
 - Loading data from text files
 
 ### 2. Pandas
+
+
+**Learning resource:**[Complete Python Pandas Data Science Tutorial!— Keith Galli] https://youtu.be/2uvysYbKdjM?si=d1QyOxQ82qZud-zm
+
 - Creating and exploring DataFrames
 - Selecting rows and columns
 - Filtering and sorting data
@@ -89,19 +98,42 @@ ml-engineering-journey/
 
 ### 3. Matplotlib
 
+**Learning resource:** [Learn Matplotlib in 1 hour — Bro Code]
+https://youtu.be/c9vhHUGdav0?si=2_Ya4oafarRba4S2
+
+
 - Creating and customizing plots using `matplotlib.pyplot`
 - Adding titles, axis labels, and grid lines
 - Visualizing categorical data using bar charts and pie charts
 - Analyzing relationships and distributions using scatter plots and histograms
 - Displaying multiple charts using `subplots()` and integrating NumPy and Pandas data for visualization
 
-### 3. Next Learning Stages
+### 4. Machine Learning — Current Learning Stage
+
+**Learning resource:** [Machine Learning for Everybody — freeCodeCamp.org]
+https://www.youtube.com/watch?v=i_LwzRVP7bg
+
+Planned topics and practical implementations:
+
+- Introduction to machine learning, features, and model training
+- Data preparation and preprocessing
+- Classification algorithms: K-Nearest Neighbors (KNN), Naive Bayes, Logistic Regression, and Support Vector Machines (SVM)
+- Regression algorithms and model evaluation
+- Neural networks and TensorFlow
+- Unsupervised learning with K-Means clustering
+- Dimensionality reduction with Principal Component Analysis (PCA)
+
+The goal is to understand the concepts, implement models, evaluate their performance, and document experiments rather than simply complete video tutorials.
+
+### 5. Next Learning Stages
 
 - Mathematics and statistics for machine learning
-- Classical machine learning with scikit-learn
-- Model evaluation and experimentation
+- Classical machine learning with Scikit-learn
+- Feature engineering and model evaluation
 - Deep learning with PyTorch
-- Real-world AI and intelligent systems projects
+- Computer vision and reinforcement learning
+- Model deployment and practical AI applications
+- Intelligent systems integrating AI with software and hardware
 
 These are planned learning stages, not completed milestones.
 
