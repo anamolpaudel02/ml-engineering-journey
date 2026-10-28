@@ -97,7 +97,8 @@ ml-engineering-journey/
 
 ### 3. Matplotlib
 
-**Learning resource:** [Learn Matplotlib in 1 hour — Bro Code] https://youtu.be/c9vhHUGdav0?si=2_Ya4oafarRba4S2
+**Learning resource:** [Learn Matplotlib in 1 hour — Bro Code] 
+https://youtu.be/c9vhHUGdav0?si=2_Ya4oafarRba4S2
 
 
 - Creating and customizing plots using `matplotlib.pyplot`
@@ -108,7 +109,8 @@ ml-engineering-journey/
 
 ### 4. Machine Learning — Current Learning Stage
 
-**Learning resource:** [Machine Learning for Everybody — freeCodeCamp.org](https://www.youtube.com/watch?v=i_LwzRVP7bg)
+**Learning resource:** [Machine Learning for Everybody — freeCodeCamp.org]
+https://www.youtube.com/watch?v=i_LwzRVP7bg
 
 Planned topics and practical implementations:
 
