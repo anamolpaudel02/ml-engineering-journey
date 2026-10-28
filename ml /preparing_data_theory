@@ -1,0 +1,40 @@
+1. we will randomly splits your dataset into training (60%), validation (20%), and testing (20%) datasets
+2. we need to split the data  because If we train and test on the same data, the model might memorize the examples instead of learning patterns that generalize to new data. This is called overfitting
+3. df.sample(frac=1) randomly shuffles all rows in datasets for 100% and for reproducible random_state = 42 is needed
+
+
+
+Function using RandomOverSampler:
+
+    How it works:   
+        1. Extract x and y: x contains input features; y contains target labels
+            i.x — extracts all columns except the last one (the input features/feature matrix)
+            ii.y — extract the last column, which contains the target labels / target vector
+
+        2. Scale features: StandardScaler() brings features to a similar scale
+            i.fit — calculates the mean and standard deviation of each feature
+            ii.transform — uses those values to standardize the feature values
+        3. Optional oversampling
+            If oversample=True, RandomOverSampler duplicates minority-class samples to balance the training data
+        4. Combine arrays: np.hstack() combines scaled features and labels into one 2D array
+            a.np.reshape(y, (-1, 1)) converts y into a 2D column array
+            b.np.hstack() combines the scaled features and label column horizontally
+        5. Return: Returns the combined data, features (x), and labels (y)
+
+
+RandomOverSampler creates another 500 hadron samples by randomly selecting existing hadron samples and duplicating them. It does not create new, original data
+
+
+
+i.Training: Scales features and balances classes using RandomOverSampler
+ii.Validation: Scales features without oversampling; used to tune the model
+iii.Testing: Scales features without oversampling; used to evaluate final performance on unseen data
+
+
+
+# oversample=True or False decides whether to balance the classes using RandomOverSampler.
+    - Training (True): Oversampling is enabled to balance gamma and hadron samples so the model can learn from both classes
+    - Validation (False): Oversampling is disabled. Use the original class distribution to evaluate and tune the model
+    - Testing (False): Oversampling is disabled. Evaluate final performance on the original, unseen data
+
+In short: Balance the training data only; keep validation and test data unchanged for fair evaluation
