@@ -69,7 +69,8 @@ ml-engineering-journey/
 
 ### 1. NumPy
 
-**Learning resource:**[Python NumPy Tutorial for Beginners — freeCodeCamp.org] (https://youtu.be/QUT1VHiLmmI?si=lCSuL2XnqKi-ocG3)
+**Learning resource:**[Python NumPy Tutorial for Beginners — freeCodeCamp.org] 
+https://youtu.be/QUT1VHiLmmI?si=lCSuL2XnqKi-ocG3
 
 
 - Creating and manipulating arrays
@@ -97,7 +98,7 @@ ml-engineering-journey/
 
 ### 3. Matplotlib
 
-**Learning resource:** [Learn Matplotlib in 1 hour — Bro Code] 
+**Learning resource:** [Learn Matplotlib in 1 hour — Bro Code]
 https://youtu.be/c9vhHUGdav0?si=2_Ya4oafarRba4S2
 
 
