@@ -1,6 +1,12 @@
+<!-- I made this a separate file instead of keeping it inside preparing_data.py so, I can easily import and reuse it in other files -->
+
 1. we will randomly splits your dataset into training (60%), validation (20%), and testing (20%) datasets
 2. we need to split the data  because If we train and test on the same data, the model might memorize the examples instead of learning patterns that generalize to new data. This is called overfitting
 3. df.sample(frac=1) randomly shuffles all rows in datasets for 100% and for reproducible random_state = 42 is needed
+4. Reproducibility: random_state=42 makes the random shuffle repeatable.
+5. Consistent scaling: Fit StandardScaler on training data only, then use transform() on validation and test data.
+6. Avoiding data leakage: Validation and test data must not influence the scaler's learned statistics.
+7. Array compatibility: .to_numpy() converts a Pandas DataFrame into a NumPy array so [:, :-1] and [:, -1] work.
 
 
 

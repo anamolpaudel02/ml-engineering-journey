@@ -1,0 +1,42 @@
+K-Nearest Neighbors (KNN)
+
+KNN is a supervised machine learning algorithm that predicts the class of a new data point by looking at the K closest points in the training dataset
+
+How it works
+
+1. Choose K: We use K=5, meaning the algorithm considers the five nearest training samples when making a prediction
+2. Calculate distances:KNN calculates the distance between the new data point and the training samples. Since distance is important, we scale the features before using KNN
+3. Majority vote: It counts the classes of the five nearest neighbors and chooses the class that appears most often
+4. Predict: It assigns the new data point to the majority class
+
+Example
+    Suppose we want to classify a new observation from the MAGIC Gamma Telescope dataset.
+        - 3 of its 5 nearest neighbors are gamma.
+        - 2 of its 5 nearest neighbors are hadron.
+    Prediction: Gamma, because gamma receives the majority vote (3 out of 5)
+
+Why do we use K = 5?
+In KNeighborsClassifier(n_neighbors=5), n_neighbors=5 sets K to 5.
+
+    - K = 1:Uses only the single nearest neighbor. It can be sensitive to noise and outliers
+    - K = 3: Uses the three nearest neighbors. It considers more points than K = 1 but may still be sensitive to local patterns
+    - K = 5: Uses the five nearest neighbors. It is a reasonable starting value, but it is not guaranteed to be the best
+    - Larger K: Considers more neighbors, which can smooth predictions but may overlook local pattern
+
+
+We usually try different K values and compare their validation performance to select a suitable one. An odd K can also reduce ties in binary classification, although it does not eliminate every possible tie
+
+
+Understanding the implementation
+    - load_data() loads the MAGIC dataset.
+    - prepare_data(df) splits the data, scales the features, and balances the training data through oversampling.
+    - KNeighborsClassifier(n_neighbors=5) creates a KNN model that considers five neighbors
+    - model.fit(X_train, y_train) trains the model by storing the training samples and their labels for neighbor searches
+    - model.predict(X_valid) predicts the classes of the validation samples
+    - accuracy_score(y_valid, predictions) calculates the proportion of validation predictions that are correct
+
+Why use validation data?
+
+    We use validation data to compare different K values and select a model. We keep the test data separate until we have selected the model, then use it for the final evaluation.
+
+Note:Accuracy alone may be misleading if gamma and hadron samples are imbalanced. Precision, recall, F1-score, and a confusion matrix can provide a more complete evaluation.
