@@ -1,4 +1,4 @@
-# ML Engineering Journey 🚀
+# ML Engineering Journey 
 
 A hands-on journey into **Machine Learning, Deep Learning, and Intelligent Systems** — documenting my learning process through code, experiments, projects, and practical implementations.
 
@@ -6,7 +6,7 @@ I'm a Computer Engineering student building a strong foundation in programming, 
 
 This repository is my public learning log: a place to practice consistently, document what I learn, revisit concepts, and turn theory into working implementations.
 
-## 🎯 Goals
+##  Goals
 
 - Build strong programming and problem-solving skills.
 - Understand data manipulation and analysis using Python.
@@ -15,7 +15,7 @@ This repository is my public learning log: a place to practice consistently, doc
 - Explore intelligent systems, computer vision, reinforcement learning, and AI applications.
 - Build practical projects and document the lessons learned along the way.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Technology | Purpose |
 |---|---|
@@ -28,7 +28,7 @@ This repository is my public learning log: a place to practice consistently, doc
 
 *The stack will expand as I learn and build more projects.*
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```text
 ml-engineering-journey/
@@ -65,7 +65,7 @@ ml-engineering-journey/
 └── README.md
 ```
 
-## 📚 Current Learning Progress
+##  Current Learning Progress
 
 ### 1. NumPy
 
@@ -137,7 +137,7 @@ The goal is to understand the concepts, implement models, evaluate their perform
 
 These are planned learning stages, not completed milestones.
 
-## 💻 Running the Code
+##  Running the Code
 
 Clone the repository:
 
@@ -156,7 +156,7 @@ source .venv/bin/activate
 Install the libraries used in the current exercises:
 
 ```bash
-python -m pip install numpy pandas
+python -m pip install numpy pandas matplotlib scikit-learn imbalanced-learn ucimlrepo
 ```
 
 Run an individual script, for example:
@@ -164,12 +164,12 @@ Run an individual script, for example:
 ```bash
 python numpy/learnnp.py
 python pandas/learn.py
-python matplot/learn.py
+python matpilotlib/bargraph.py
 ```
 
 Run scripts from the repository root unless a script specifies otherwise. Some exercises may require their associated data files or paths to be configured.
 
-## 📈 Learning Philosophy
+## Learning Philosophy
 
 - **Understand, don't just copy:** Learn why the code works.
 - **Practice consistently:** Write code, experiment, and solve problems.
@@ -177,7 +177,7 @@ Run scripts from the repository root unless a script specifies otherwise. Some e
 - **Build progressively:** Move from fundamentals to complete projects.
 - **Track real progress:** Add new concepts and implementations as they are learned.
 
-## 🧭 Long-Term Direction
+##  Long-Term Direction
 
 My interests lie at the intersection of **AI/ML, algorithms, software systems, and robotics**. I want to understand not only how to train intelligent models, but also how to build, deploy, and integrate them into real-world systems.
 
