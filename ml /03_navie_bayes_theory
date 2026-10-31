@@ -1,0 +1,31 @@
+# Naive Bayes
+
+Naive Bayes is a supervised machine learning algorithm based on Bayes Theorem. It predicts a class by calculating the probability of each possible class given the input features and choosing the class with the highest probability
+    i.e P(A|B) = {P(B|A)P(A)}/{P(B)}
+        Where:
+            - P(A|B): Probability of A happening given that B has happened (posterior probability)
+            - P(B|A): Probability of observing B when A is true (likelihood)
+            - P(A): Initial probability of A (prior probability)
+            - P(B): Overall probability of observing B (evidence)
+
+How it works
+    1. Calculate prior probability: Calculate how likely each class is before considering the features.
+    2. Calculate likelihood: Calculate how likely the observed features are for each class.
+    3. Apply Bayes' Theorem: Calculate the probability of each class given the input features.
+    4. Make prediction: Choose the class with the highest probability.
+
+
+Why is it called Naive?
+It assumes that all input features are conditionally independent of each other given the class.
+
+For example, in the MAGIC dataset, it assumes features such as fLength, fWidth, and fSize are independent once the class (gamma or hadron) is known.
+
+This assumption is often not perfectly true, hence the name Naive Bayes.
+Example
+Suppose we want to classify a new observation from the MAGIC Gamma Telescope dataset.
+- Probability of gamma: 0.75
+- Probability of hadron: 0.25
+After considering the observation's features:
+- Gamma probability: 0.85
+- Hadron probability: 0.15
+Prediction: Gamma, because it has the higher probability.
