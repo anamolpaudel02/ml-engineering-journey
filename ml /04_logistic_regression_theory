@@ -1,0 +1,122 @@
+LOGISTIC REGRESSION
+    Logistic Regression is a supervised machine learning algorithm mainly used for classification.
+
+    Despite its name, Logistic Regression is used to predict categories/classes, not continuous numerical values.
+
+    It calculates the probability that an observation belongs to a particular class and uses a threshold to make the final prediction.
+
+For example, in the MAGIC Gamma Telescope dataset:
+    - 1 = Gamma
+    - 0 = Hadron
+    The model predicts the probability of an observation being Gamma or Hadron.
+
+HOW DOES IT WORK?
+
+    1. Calculate a weighted sum:
+    The model takes input features (X), multiplies them by learned weights, and adds a bias
+    z = w1*x1 + w2*x2 + ... + wn*xn + b
+                                    Where:
+                                    - X = Input features
+                                    - w = Weights learned by the model
+                                    - b = Bias
+                                    - z = Weighted sum
+
+    2. Apply the Sigmoid Function:
+        The weighted sum (z) is passed through the sigmoid function to convert it into a probability between 0 and 1
+
+            Sigmoid Function:
+            P = 1 / (1 + e^(-z))
+            
+            The output is always between 0 and 1
+
+    3. Apply a Classification Threshold:
+    The probability is compared with a threshold, usually 0.5
+        - If probability >= 0.5, predict class 1 (Gamma)
+        - If probability < 0.5, predict class 0 (Hadron)
+
+    4. Make Prediction:
+    The model outputs the predicted class (y_pred)
+    EXAMPLE
+    Suppose a new telescope observation is given to the model.
+    The model calculates:
+        - Probability of Gamma = 0.85
+        - Probability of Hadron = 0.15
+        Using a threshold of 0.5:
+        0.85 >= 0.5
+        Therefore:
+        Predicted class (y_pred) = 1 (Gamma)
+
+UNDERSTANDING THE SIGMOID FUNCTION
+
+The sigmoid function converts any real-valued input into a value between 0 and 1
+    - A value close to 1 means a high probability of class 1.
+    - A value close to 0 means a high probability of class 0.
+    - A value of 0.5 is the default decision boundary.
+
+HOW DOES THE MODEL LEARN?
+
+Logistic Regression learns the weights (w) and bias (b) during training
+    1. It makes predictions using the current weights and bias
+    2. It compares the predicted probabilities with the actual labels
+    3. It calculates the error using a loss function called Log Loss (Binary Cross-Entropy)
+    4. It updates the weights and bias to reduce the loss
+    5. It repeats this process until the model finds suitable values
+
+This process is called optimization. Logistic Regression commonly uses an optimization algorithm such as Gradient Descent or a solver to minimize the loss.
+
+UNDERSTANDING X, y AND y_pred
+
+    - X = Input features (measurements from the telescope).
+    - y = Actual class/label.
+    - y_pred = Class predicted by the model.
+    - y_probability = Predicted probability of class 1.
+
+The model uses X to predict the probability and then converts that probability into a class label.
+
+DATA FLOW
+
+X_train + y_train
+        |
+        v
+    model.fit()
+        |
+        v
+  Trained Model
+        |
+        v
+     X_valid
+        |
+        v
+ model.predict_proba()
+        |
+        v
+ Predicted Probabilities
+        |
+        v
+ Apply Threshold (0.5)
+        |
+        v
+ predictions (y_pred)
+        |
+        v
+ Compare with y_valid
+
+IMPORTANT POINTS
+
+    - Logistic Regression is a classification algorithm.
+    - It uses the sigmoid function to calculate probabilities.
+    - Its output probability is between 0 and 1.
+    - The default classification threshold is 0.5.
+    - The model learns weights and bias during training.
+    - It commonly uses Log Loss as its loss function.
+    - It can be used for binary classification and extended to      multiclass classification.
+
+EVALUATION
+    After making predictions, compare y_pred with y_valid
+
+Use:
+    - Accuracy
+    - Precision
+    - Recall
+    - F1-score
+    - Confusion Matrix

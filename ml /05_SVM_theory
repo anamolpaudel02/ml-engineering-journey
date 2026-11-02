@@ -1,0 +1,95 @@
+SUPPORT VECTOR MACHINE (SVM)
+
+    SVM (Support Vector Machine) is a supervised machine learning algorithm mainly used for classification. It can also be used for regression
+
+    Its main goal is to find the best decision boundary (hyperplane) that separates different classes
+
+    For example, in the MAGIC Gamma Telescope dataset:
+    - 1 = Gamma
+    - 0 = Hadron
+
+    SVM tries to find a boundary that separates Gamma observations from Hadron observations
+
+HOW DOES IT WORK?
+
+    1. Find the Decision Boundary:
+    SVM finds a line (in 2D), a plane (in 3D), or a hyperplane (in higher dimensions) that separates the classes
+
+    2. Find the Margin:
+    The margin is the distance between the decision boundary and the closest observations from each class
+    SVM tries to maximize this margin
+
+    3. Identify Support Vectors:
+    Support vectors are the observations closest to the decision boundary
+    They are important because they determine the position of the boundary and the margin
+
+    4. Make Prediction:
+    When a new observation is given, SVM checks which side of the decision boundary it falls on and predicts its class
+
+ IMPORTANT CONCEPTS
+
+    1. Hyperplane:
+    The decision boundary that separates different classes.
+    2. Margin:
+    The distance between the decision boundary and the closest observations from each class
+    3. Support Vectors:
+    The closest observations to the decision boundary. They help determine the boundary
+    4. Kernel:
+    A function that helps SVM separate data that cannot be separated easily using a straight boundary
+
+TYPES OF KERNELS
+    - Linear: Uses a straight decision boundary
+    - Polynomial: Uses a curved decision     boundary based on polynomial relationships
+    - RBF (Radial Basis Function): Can create more flexible, nonlinear decision boundaries
+
+HARD MARGIN AND SOFT MARGIN
+    - Hard Margin: Tries to separate classes perfectly without allowing classification errors. It works only when data is linearly separable
+    - Soft Margin: Allows some classification errors to achieve a wider, more practical margin
+
+    Most real-world datasets use soft-margin SVM
+
+WHAT IS C?
+
+    C is a parameter that controls the trade-off between maximizing the margin and minimizing classification errors.
+
+        - High C: Penalizes classification errors more strongly. The model tries harder to classify training observations correctly.
+        - Low C: Allows more classification errors and generally favors a wider margin.
+
+EXAMPLE
+
+Suppose a new telescope observation has 10 measured features.
+
+The trained SVM model checks the observation against its learned decision boundary.
+
+    - If it falls on the Gamma side, predict 1 (Gamma).
+    - If it falls on the Hadron side, predict 0 (Hadron).
+
+ UNDERSTANDING X, y AND y_pred
+
+    - X = Input features (measurements from the telescope).
+    - y = Actual class/label.
+    - y_pred = Class predicted by the model.
+
+The model learns from X_train and y_train, then uses X_valid to predict y_pred
+
+We compare y_pred with y_valid to evaluate the model
+
+IMPORTANT POINTS
+
+    - SVM is a supervised machine learning algorithm
+    - It is mainly used for classification
+    - It tries to maximize the margin between classes
+    - Support vectors determine the decision boundary
+    - It can use different kernels for linear and nonlinear classification
+    - Feature scaling is important for SVM
+    - C controls the trade-off between margin size and classification errors
+
+ EVALUATION
+After making predictions, compare y_pred with y_valid
+
+Use:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
