@@ -1,0 +1,160 @@
+ NEURAL NETWORK (ARTIFICIAL NEURAL NETWORK)
+
+    A Neural Network is a supervised machine learning model inspired by the way biological neurons process information.
+
+    It consists of interconnected units called neurons, organized into layers. These neurons process input features, learn patterns from data, and make predictions.
+
+    For example, in the MAGIC Gamma Telescope dataset:
+    - 1 = Gamma
+    - 0 = Hadron
+
+    A Neural Network learns patterns from the telescope measurements and predicts whether an observation belongs to the Gamma or Hadron class.
+
+ STRUCTURE OF A NEURAL NETWORK
+
+    A basic Neural Network consists of three types of layers:
+
+    1. Input Layer:
+    Receives the input features (X).
+
+    In our MAGIC dataset, there are 10 input features, so the input layer receives 10 values for each observation.
+
+    2. Hidden Layers:
+    Process information from the input layer and learn patterns in the data.
+
+    Each neuron performs calculations using weights, bias, and an activation function.
+
+    3. Output Layer:
+    Produces the final prediction.
+
+    For our binary classification problem, the output layer has one neuron that produces a probability between 0 and 1.
+
+ HOW DOES A NEURAL NETWORK WORK?
+
+    1. Forward Propagation:
+
+        Input features pass through the network from the input layer to the hidden layers and finally to the output layer.
+
+        Each neuron calculates a weighted sum:
+
+        z = (w1*x1 + w2*x2 + ... + wn*xn) + b
+
+                        Where:
+                        - x = Input values
+                        - w = Weights
+                        - b = Bias
+                        - z = Weighted sum
+
+    2. Activation Function:
+
+        The weighted sum is passed through an activation function.
+
+        Activation functions help the network learn complex, nonlinear patterns.
+
+        Common activation functions:
+
+        - ReLU: Outputs zero for negative values and keeps positive values unchanged.
+        - Sigmoid: Converts values into probabilities between 0 and 1.
+        - Softmax: Converts multiple outputs into probabilities that sum to 1.
+
+    3. Calculate Loss:
+
+        The predicted output is compared with the actual label (y).
+
+        A loss function measures how far the prediction is from the correct answer.
+
+        For binary classification, Binary Cross-Entropy is commonly used.
+
+    4. Backpropagation:
+
+        The network calculates how much each weight contributed to the prediction error
+
+        It sends this error information backward through the network to calculate gradients
+
+    5. Update Weights:
+
+        An optimizer, such as Gradient Descent or Adam, updates the weights and biases to reduce the loss.
+
+    This process repeats over multiple training iterations.
+
+ IMPORTANT CONCEPTS
+
+    1. Neuron:
+    A basic computational unit that receives inputs, applies weights and bias, and produces an output.
+
+    2. Weights:
+    Values learned by the network that determine the importance of input connections.
+
+    3. Bias:
+    An additional learnable value that helps the neuron adjust its output.
+
+    4. Activation Function:
+    Introduces nonlinearity so the network can learn complex patterns.
+
+    5. Forward Propagation:
+    The process of passing input data through the network to produce predictions.
+
+    6. Backpropagation:
+    The process of calculating gradients to determine how weights and biases should change.
+
+    7. Epoch:
+    One complete pass through the entire training dataset.
+
+    8. Batch:
+    A subset of training observations processed together before updating the model.
+
+    9. Learning Rate:
+    Controls how much the weights are adjusted during each update.
+
+    10. Loss Function:
+        Measures the difference between predicted outputs and actual labels.
+
+ EXAMPLE
+
+    Suppose a new telescope observation has 10 measured features.
+
+    The Neural Network processes these features through its hidden layers and produces:
+
+    - Probability of Gamma: 0.90
+    - Probability of Hadron: 0.10
+
+    Using a threshold of 0.5:
+
+    0.90 >= 0.5
+
+    Therefore:
+
+    Predicted class (y_pred) = 1 (Gamma)
+
+ UNDERSTANDING X, y AND y_pred
+
+    - X = Input features (measurements from the telescope).
+    - y = Actual class/label.
+    - y_pred = Class predicted by the model.
+    - y_probability = Predicted probability of class 1.
+
+    The model learns from X_train and y_train, then uses X_valid to predict y_pred.
+
+    We compare y_pred with y_valid to evaluate the model.
+
+ IMPORTANT POINTS
+
+    - Neural Networks are inspired by biological neural systems.
+    - They consist of input, hidden, and output layers.
+    - They learn by adjusting weights and biases.
+    - Forward propagation produces predictions.
+    - Backpropagation calculates gradients.
+    - Optimizers update weights to reduce loss.
+    - They can learn complex linear and nonlinear relationships.
+    - They generally require more computational resources and training data than simpler algorithms.
+
+ EVALUATION
+
+After making predictions, compare y_pred with y_valid.
+
+Use:
+- Accuracy
+- Precision
+- Recall
+- F1-score
+- Confusion Matrix
